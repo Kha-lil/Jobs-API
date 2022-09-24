@@ -7,6 +7,12 @@ const connectDB = (url) => {
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
+  .then(() => {
+    console.log(`Database connected Successfully`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 }
 
 module.exports = connectDB
